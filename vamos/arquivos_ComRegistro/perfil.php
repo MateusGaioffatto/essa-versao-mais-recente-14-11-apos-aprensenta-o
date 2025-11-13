@@ -32,8 +32,10 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     <link rel="shortcut icon" href="../SafeLinks_Favicon_Logo.png">
 
     <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="index_php.css">
     <link rel="stylesheet" href="../navBarStyle.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <!-- Incluir estilos específicos de favoritos e histórico -->
     <link rel="stylesheet" href="favoritosStyle.css">
     <link rel="stylesheet" href="historicoStyle.css">
@@ -189,6 +191,18 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
      
     
+
+
+    <div class="redesDeContatoElemento" id="redesDeContatoElementoId" style="height: unset">
+      <ul aria-label="Fine Print">
+        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
+        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
+        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+      </ul>
+    </div>
+
+
+
     <!-- Incluir scripts necessários -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="perfil.js"></script>

@@ -134,6 +134,17 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
 
 
+  <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
+    <ul aria-label="Fine Print">
+      <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
+      <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
+      <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+    </ul>
+  </div>
+
+
+
+
   <!-- <div class="gemini-explanation">
       <h4>Explicação do Gemini:</h4>
       <p><?php echo htmlspecialchars($geminiExplanation); ?></p>
@@ -144,7 +155,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
 
   <!-- Modal de Perfil -->
-  <div id="profileModal" class="modal">
+  <!-- <div id="profileModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Meu Perfil</h2>
@@ -169,7 +180,8 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
         <button type="button" id="deleteAccount" class="btn btn-danger">Excluir Conta</button>
       </form>
     </div>
-  </div>
+  </div> -->
+
   <script src="../script.js"></script>
   <script src="index_php.js"></script>
 

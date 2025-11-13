@@ -134,6 +134,43 @@ body.dark-mode .homePageSubTitulo {
 
 
 
+.redesDeContatoElemento {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  animation: homePage_Titulo_Pesquisa_OpcoesOpacity 2s ease forwards;
+}
+  .redesDeContatoElemento a {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    color: inherit;
+  }
+  .redesDeContatoElemento ul {
+    display: flex;
+    list-style: none;
+    padding: 0 40px;
+    justify-content: end;
+    top: 10px;
+    position: relative;
+  }
+  .redesDeContatoElemento i {
+    color: white;
+    font-size: 155%;
+    position: relative;
+    padding: 0 10px;
+    top: -2px;
+    font-weight: bold;
+  }
+
+
+
+
+
 @media (max-width: 768px) {
   .searchInput {
     width: 200px;
