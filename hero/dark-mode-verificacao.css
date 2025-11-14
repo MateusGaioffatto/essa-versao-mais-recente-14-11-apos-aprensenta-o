@@ -1,0 +1,608 @@
+
+
+
+
+/* Container principal */
+body.dark-mode #resultadoVerificacaoURL {
+  --dm-primary: #6c8eff;
+  --dm-success: #4cc9f0;
+  --dm-danger: #f72585;
+  --dm-warning: #ffc107;
+  --dm-secondary: #6c757d;
+  --dm-light: #f8f9fa;
+  --dm-dark: #121212;
+  --dm-dark-surface: #1e1e1e;
+  --dm-dark-card: #2d2d2d;
+  --dm-border: #444;
+}
+
+/* Alertas - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .alert {
+  background-color: var(--dm-dark-card) !important;
+  color: var(--dm-light) !important;
+  border: 1px solid var(--dm-border) !important;
+  border-left-width: 4px !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .alert-success {
+  border-left-color: var(--dm-success) !important;
+  background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), var(--dm-dark-card)) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .alert-danger {
+  border-left-color: var(--dm-danger) !important;
+  background: linear-gradient(135deg, rgba(247, 37, 133, 0.1), var(--dm-dark-card)) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .alert-warning {
+  border-left-color: var(--dm-warning) !important;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), var(--dm-dark-card)) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .alert-info {
+  border-left-color: var(--dm-success) !important;
+  background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), var(--dm-dark-card)) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .alert-secondary {
+  border-left-color: var(--dm-secondary) !important;
+  background: linear-gradient(135deg, rgba(108, 117, 125, 0.1), var(--dm-dark-card)) !important;
+}
+
+/* Badges - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .badge {
+  color: var(--dm-light) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .badge.bg-secondary {
+  background-color: #495057 !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+/* Botões - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .btn-outline-success {
+  color: var(--dm-success) !important;
+  border-color: var(--dm-success) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .btn-outline-success:hover {
+  background-color: var(--dm-success) !important;
+  color: var(--dm-dark) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .btn-outline-danger {
+  color: var(--dm-danger) !important;
+  border-color: var(--dm-danger) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .btn-outline-danger:hover {
+  background-color: var(--dm-danger) !important;
+  color: var(--dm-light) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .btn-secondary {
+  background-color: #495057 !important;
+  border-color: #495057 !important;
+  color: var(--dm-light) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .btn-secondary:hover {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+/* Cards - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .card {
+  background-color: var(--dm-dark-card) !important;
+  border-color: var(--dm-border) !important;
+  color: var(--dm-light) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .card.border-danger {
+  border-color: var(--dm-danger) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .card.border-warning {
+  border-color: var(--dm-warning) !important;
+}
+
+/* Textos - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .text-success {
+  color: var(--dm-success) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .text-danger {
+  color: var(--dm-danger) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .text-warning {
+  color: var(--dm-warning) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .text-muted {
+  color: #adb5bd !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .text-primary {
+  color: var(--dm-primary) !important;
+}
+
+/* Progress Bars - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .progress {
+  background-color: var(--dm-dark-surface) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .progress-bar {
+  background-color: var(--dm-primary) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .progress-bar.bg-success {
+  background-color: var(--dm-success) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .progress-bar.bg-warning {
+  background-color: var(--dm-warning) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .progress-bar.bg-danger {
+  background-color: var(--dm-danger) !important;
+}
+
+/* Modal - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .modal-content {
+  background-color: var(--dm-dark-surface) !important;
+  color: var(--dm-light) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .modal-header {
+  border-bottom-color: var(--dm-border) !important;
+  background-color: var(--dm-dark-card) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .modal-footer {
+  border-top-color: var(--dm-border) !important;
+  background-color: var(--dm-dark-card) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .btn-close {
+  filter: invert(1) brightness(2) !important;
+}
+
+/* Bordas - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .border-bottom {
+  border-bottom-color: var(--dm-border) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .border {
+  border-color: var(--dm-border) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .border.rounded {
+  background-color: var(--dm-dark-card) !important;
+}
+
+/* Spinner - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .spinner-border.text-primary {
+  color: var(--dm-primary) !important;
+}
+
+/* Ícones - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .alert-success .fas.fa-check-circle {
+  color: var(--dm-success) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .alert-danger .fas.fa-exclamation-triangle {
+  color: var(--dm-danger) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .alert-warning .fas.fa-exclamation-triangle {
+  color: var(--dm-warning) !important;
+}
+
+/* Histórico de Pesquisas - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .pesquisaRecenteItem {
+  background-color: rgba(67, 97, 238, 0.1) !important;
+  color: var(--dm-light) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .pesquisaRecenteItem:hover {
+  background-color: rgba(67, 97, 238, 0.2) !important;
+}
+
+/* Tabelas e elementos de dados - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL .table {
+  color: var(--dm-light) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--dm-light) !important;
+}
+
+/* Listas - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL ul,
+body.dark-mode #resultadoVerificacaoURL ol {
+  color: var(--dm-light) !important;
+}
+
+/* Links dentro do resultado - Modo Noturno */
+body.dark-mode #resultadoVerificacaoURL a {
+  color: var(--dm-primary) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL a:hover {
+  color: var(--dm-success) !important;
+}
+
+/* Animações suaves para transições de modo */
+body.dark-mode #resultadoVerificacaoURL * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+  body.dark-mode #resultadoVerificacaoURL .alert {
+    margin: 10px 0 !important;
+    padding: 15px !important;
+  }
+  
+  body.dark-mode #resultadoVerificacaoURL .btn {
+    font-size: 0.9rem !important;
+    padding: 8px 16px !important;
+  }
+  
+  body.dark-mode #resultadoVerificacaoURL .modal-dialog {
+    margin: 10px !important;
+  }
+}
+
+/* Estilos específicos para elementos customizados */
+body.dark-mode #resultadoVerificacaoURL .custom-alert {
+  background-color: var(--dm-dark-card) !important;
+  color: var(--dm-light) !important;
+  border: 1px solid var(--dm-border) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .custom-card {
+  background: linear-gradient(135deg, var(--dm-dark-card), var(--dm-dark-surface)) !important;
+  color: var(--dm-light) !important;
+}
+
+/* Garantir que textos permaneçam legíveis */
+body.dark-mode #resultadoVerificacaoURL .text-dark {
+  color: var(--dm-light) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .bg-light {
+  background-color: var(--dm-dark-card) !important;
+}
+
+body.dark-mode #resultadoVerificacaoURL .bg-white {
+  background-color: var(--dm-dark-surface) !important;
+}
+
+
+
+
+/* ===== MODAL NO MODO NOTURNO ===== */
+
+/* Modal backdrop */
+body.dark-mode .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+body.dark-mode .modal-backdrop.show {
+  opacity: 0.8 !important;
+}
+
+/* Modal content */
+body.dark-mode .modal-content {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d) !important;
+  color: #f8f9fa !important;
+  border: 1px solid #444 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 12px !important;
+}
+
+/* Modal header */
+body.dark-mode .modal-header {
+  background: linear-gradient(135deg, #2d2d2d, #1e1e1e) !important;
+  border-bottom: 1px solid #444 !important;
+  color: #f8f9fa !important;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  padding: 1rem 1.5rem !important;
+}
+
+body.dark-mode .modal-title {
+  color: #f8f9fa !important;
+  font-weight: 600 !important;
+}
+
+/* Modal body */
+body.dark-mode .modal-body {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d) !important;
+  color: #f8f9fa !important;
+  padding: 1.5rem !important;
+}
+
+/* Modal footer */
+body.dark-mode .modal-footer {
+  background: linear-gradient(135deg, #2d2d2d, #1e1e1e) !important;
+  border-top: 1px solid #444 !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  padding: 1rem 1.5rem !important;
+}
+
+/* Botão fechar */
+body.dark-mode .btn-close {
+  filter: invert(1) brightness(2) !important;
+  opacity: 0.8 !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .btn-close:hover {
+  opacity: 1 !important;
+  transform: rotate(90deg) !important;
+}
+
+/* Botões no modal */
+body.dark-mode .modal-footer .btn-secondary {
+  background: linear-gradient(135deg, #495057, #6c757d) !important;
+  border: none !important;
+  color: #f8f9fa !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .modal-footer .btn-secondary:hover {
+  background: linear-gradient(135deg, #6c757d, #495057) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3) !important;
+}
+
+/* Conteúdo específico dentro do modal */
+body.dark-mode .modal .alert {
+  background: linear-gradient(135deg, rgba(45, 45, 45, 0.9), rgba(30, 30, 30, 0.8)) !important;
+  color: #f8f9fa !important;
+  border: 1px solid #444 !important;
+  border-left-width: 4px !important;
+}
+
+body.dark-mode .modal .alert-success {
+  border-left-color: #4cc9f0 !important;
+  background: linear-gradient(135deg, rgba(76, 201, 240, 0.15), rgba(45, 45, 45, 0.9)) !important;
+}
+
+body.dark-mode .modal .alert-danger {
+  border-left-color: #f72585 !important;
+  background: linear-gradient(135deg, rgba(247, 37, 133, 0.15), rgba(45, 45, 45, 0.9)) !important;
+}
+
+body.dark-mode .modal .alert-info {
+  border-left-color: #4cc9f0 !important;
+  background: linear-gradient(135deg, rgba(76, 201, 240, 0.15), rgba(45, 45, 45, 0.9)) !important;
+}
+
+body.dark-mode .modal .alert-warning {
+  border-left-color: #ffc107 !important;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(45, 45, 45, 0.9)) !important;
+}
+
+/* Cards dentro do modal */
+body.dark-mode .modal .card {
+  background: linear-gradient(135deg, #2d2d2d, #1e1e1e) !important;
+  border: 1px solid #444 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .modal .card.border-danger {
+  border-color: #f72585 !important;
+  background: linear-gradient(135deg, rgba(45, 45, 45, 0.9), rgba(247, 37, 133, 0.1)) !important;
+}
+
+body.dark-mode .modal .card.border-warning {
+  border-color: #ffc107 !important;
+  background: linear-gradient(135deg, rgba(45, 45, 45, 0.9), rgba(255, 193, 7, 0.1)) !important;
+}
+
+/* Textos dentro do modal */
+body.dark-mode .modal .text-success {
+  color: #4cc9f0 !important;
+}
+
+body.dark-mode .modal .text-danger {
+  color: #f72585 !important;
+}
+
+body.dark-mode .modal .text-warning {
+  color: #ffc107 !important;
+}
+
+body.dark-mode .modal .text-muted {
+  color: #adb5bd !important;
+}
+
+body.dark-mode .modal strong {
+  color: #f8f9fa !important;
+}
+
+/* Bordas e divisórias no modal */
+body.dark-mode .modal .border-bottom {
+  border-bottom-color: #444 !important;
+}
+
+body.dark-mode .modal .border {
+  border-color: #444 !important;
+}
+
+body.dark-mode .modal .border.rounded {
+  background: linear-gradient(135deg, #2d2d2d, #1e1e1e) !important;
+}
+
+/* Progress bars no modal */
+body.dark-mode .modal .progress {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d) !important;
+}
+
+body.dark-mode .modal .progress-bar {
+  background: linear-gradient(135deg, #4361ee, #4cc9f0) !important;
+}
+
+body.dark-mode .modal .progress-bar.bg-success {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+}
+
+body.dark-mode .modal .progress-bar.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #fd7e14) !important;
+}
+
+body.dark-mode .modal .progress-bar.bg-danger {
+  background: linear-gradient(135deg, #dc3545, #f72585) !important;
+}
+
+/* Badges no modal */
+body.dark-mode .modal .badge {
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .modal .badge.bg-secondary {
+  background: linear-gradient(135deg, #495057, #6c757d) !important;
+}
+
+body.dark-mode .modal .badge.bg-danger {
+  background: linear-gradient(135deg, #dc3545, #f72585) !important;
+}
+
+body.dark-mode .modal .badge.bg-success {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+}
+
+body.dark-mode .modal .badge.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #fd7e14) !important;
+  color: #000 !important;
+}
+
+/* Listas no modal */
+body.dark-mode .modal ul,
+body.dark-mode .modal ol {
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .modal ul li,
+body.dark-mode .modal ol li {
+  color: #f8f9fa !important;
+}
+
+/* Ícones no modal */
+body.dark-mode .modal .fas,
+body.dark-mode .modal .fab,
+body.dark-mode .modal .far {
+  color: inherit !important;
+}
+
+body.dark-mode .modal .fa-check-circle {
+  color: #4cc9f0 !important;
+}
+
+body.dark-mode .modal .fa-exclamation-triangle {
+  color: #f72585 !important;
+}
+
+/* Tabelas no modal (se houver) */
+body.dark-mode .modal .table {
+  color: #f8f9fa !important;
+  background: transparent !important;
+}
+
+body.dark-mode .modal .table th {
+  background: linear-gradient(135deg, #2d2d2d, #1e1e1e) !important;
+  border-color: #444 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .modal .table td {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d) !important;
+  border-color: #444 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .modal .table-hover tbody tr:hover {
+  background: linear-gradient(135deg, #2d2d2d, #1e1e1e) !important;
+}
+
+/* Scrollbar personalizada para modal no modo escuro */
+body.dark-mode .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-mode .modal-body::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+body.dark-mode .modal-body::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+body.dark-mode .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animações para o modal */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+body.dark-mode .modal.fade .modal-dialog {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Responsividade para modal mobile */
+@media (max-width: 768px) {
+  body.dark-mode .modal-dialog {
+    margin: 10px !important;
+    max-width: calc(100% - 20px) !important;
+  }
+  
+  body.dark-mode .modal-content {
+    border-radius: 8px !important;
+  }
+  
+  body.dark-mode .modal-header,
+  body.dark-mode .modal-footer {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  body.dark-mode .modal-body {
+    padding: 1rem !important;
+  }
+}
+
+/* Efeito de foco para acessibilidade */
+body.dark-mode .modal .btn:focus,
+body.dark-mode .modal .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(108, 142, 255, 0.25) !important;
+  border-color: #6c8eff !important;
+}

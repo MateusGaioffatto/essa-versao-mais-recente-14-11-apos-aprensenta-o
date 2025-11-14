@@ -1,0 +1,151 @@
+<?php
+// REDIRECIONAMENTO FORTE PARA HTTPS - COLOCAR NO TOPO ABSOLUTO
+if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
+    $redirect_url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect_url);
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="pt_br" style="overflow: hidden;">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> SafeLinks - Pesquisa Segura de Produtos </title>
+
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="tutorial.css">
+  <link rel="stylesheet" href="navBarStyle.css"> 
+  <link rel="stylesheet" href="searchInput_searchButtonsStyle.css"> 
+  <link rel="stylesheet" href="dark-mode-verificacao.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
+  <!-- <link rel="icon" href="SafeLinks_Favicon_Logo.png" type="image/png">  -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+</head>
+  <body style="overflow: hidden;">
+
+    <div id="logoBackgroundDiv">
+      <img src="SafeLinks_Background_Logo.png" id="logoBackgroundImage">
+    </div>
+
+
+
+    <nav class="navBarElemento" id="navBarElementoId"> 
+      <div class="navBarContainer"> 
+      <div class="navBarLogo" id="navBarLogoId"><a href="#"> SafeLinks </a></div> 
+          <ul class="navBarLinks" id="navBarLinksId"> 
+            <li id="usuarioLoginLi"><a href="arquivos_ComRegistro/logi.php"><i class="fas fa-user"></i> Usuário </a></li> 
+            <!-- <li><a href="#"><i class="fa fa-bell" id="notificacoesIcone"></i> Notificações </a></li>  -->
+            <li><a href="sobre.php"><i class="fa-solid fa-circle-info"></i> Sobre </a></li> 
+            <li><a href="dicas.php"><i class="fa-solid fa-lightbulb"></i> Dicas </a></li>
+            <li class="modoEscuroClaroElemento" id="modoEscuroClaroElementoId">
+              <a><i class="fas fa-moon"></i> Modo </a>
+            </li>
+          </ul>
+          <div class="menuHamburguerElemento" id="menuHamburguerElementoId"> 
+            <i class="fas fa-bars"></i> 
+          </div>
+      </div>
+    </nav>
+
+
+
+    
+    <div class="tutorialBoxes_OverflowControle" id="tutorialBoxes_OverflowControleId">
+      <div class="homePageBlurEffect" id="homePageBlurEffectID"></div>
+      <div class="tutorialBoxes" id="tutorialBoxesID" >
+        <div class="tutorialBoxesCloseIcone">
+          <h5> 1/3 </h5>
+            <i class="fa light fa-xmark"></i>
+        </div>
+        <div class="tutorialBoxesImagensStyles">
+          <img src="tutorial_GIFs/homePage_GIFs/Tutorial01.gif">
+        </div>
+        <p> Caixas de tutorial vão seguir esse padrão! </p>
+        <div class="tutorialBoxesButtonsDiv">
+          <button class="tutorialBoxesButtons"> Mais Tarde </button>
+          <button class="tutorialBoxesButtons"> Próximo </button>
+        </div>
+        </div>
+    </div>
+      
+    
+
+
+
+    <div class="homePage_Titulo_Pesquisa_Opcoes" id="homePage_Titulo_Pesquisa_OpcoesId"> 
+      <header> 
+        <div class="homePageTitulo">SafeLinks</div> 
+        <div class="homePageSubTitulo">Pesquisa segura em lojas confiáveis</div> 
+      </header>
+
+      <div class="searchInput_searchButtonsDiv" id="searchInput_searchButtonsDivId"> 
+        <div class="searchInputDiv" id="searchInputDivId"> 
+          <input type="text" class="searchInput" id="searchInputId" autocomplete="off" placeholder="Entre com a URL de um site"> 
+            <button class="searchButton" id="searchButtonId" aria-label="Search"> 
+              <i class="material-icons" id="searchButtonIcon">search</i> 
+            </button>
+            <button class="voiceSearch" id="voiceSearchId" aria-label="VoiceSearch"> 
+              <i class="material-icons" id="voiceSearchIcon">mic</i>
+            </button>
+        </div>
+
+        <br>
+        
+        <div class="searchOpcoes"> 
+          <button class="searchOpcoesButtons" id="limparTexto"> 
+            <i class="fas fa-eraser"></i> Limpar
+          </button>
+          <button class="searchOpcoesButtons" id="acessarHistorico"> 
+            <i class="fas fa-history"></i> Histórico
+          </button>
+        </div>
+      </div>
+
+
+      
+      <div id="resultadoVerificacaoURL" style="display: none; margin-top: 20px; padding: 15px; border-radius: 8px; width: 100%; max-width: 600px;"></div>
+      <!-- <p id="resumo_Gemini"></p> -->
+      <div class="pesquisasRecentes" id="pesquisasRecentesId"> 
+        <div class="pesquisasRecentesTitulo">Pesquisas recentes</div> 
+        <div class="pesquisasRecentesItems" id="pesquisasRecentesItemsId"></div> 
+      </div>
+    </div>
+
+
+
+    <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
+      <ul aria-label="Fine Print">
+        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
+        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
+        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+      </ul>
+    </div>
+
+
+
+    <script src="script.js"></script> 
+
+    <script src="tutorial_homePage.js"></script>
+    <script src="tutorial.js"></script>
+
+    <script src="theme.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
+
+    <script src="campoDePesquisa_URL_Produtos.js"></script>
+    <script src="verificacaoURL.js"></script>
+    <!-- <script src="resumo_Gemini.js" type="module"></script> -->
+
+  </body>
+
+</html>
