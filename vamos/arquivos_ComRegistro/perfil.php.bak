@@ -1,0 +1,89 @@
+
+<?php
+// REDIRECIONAMENTO FORTE PARA HTTPS - COLOCAR NO TOPO ABSOLUTO
+if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
+    $redirect_url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect_url);
+    exit();
+}
+
+session_start();
+
+// Verificar se o usuário está logado
+if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+    // Se não estiver logado, redirecionar para a página de login
+    header('Location: logi.php?message=' . urlencode('Acesso restrito! Faça login.') . '&type=error');
+    exit();
+}
+
+
+?>
+<!DOCTYPE html>''
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SafeLinks - Meu Perfil </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="shortcut icon" href="../SafeLinks_Favicon_Logo.png">
+
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="index_php.css">
+    <link rel="stylesheet" href="../navBarStyle.css">
+    <link rel="stylesheet" href="historicoStyle.css">
+    <link rel="stylesheet" href="favoritosStyle.css">
+</head>
+<body style="overflow: clip;">
+
+    <div id="logoBackgroundDiv" style="position: absolute; left: 20%;">
+        <img src="../SafeLinks_Background_Logo.png" id="logoBackgroundImage">
+    </div>
+
+    <nav class="navBarElemento" id="navBarElementoId"> <!-- HOMEPAGE: NAVBAR -->
+        <div class="navBarContainer"> 
+        <div class="navBarLogo" id="navBarLogoId"><a href="index.php"> SafeLinks </a></div> <!-- HOMEPAGE: NAVBAR, LOGO -->
+            <ul class="navBarLinks" id="navBarLinksId"> <!-- HOMEPAGE: NAVBAR, ÍCONES COM LINKS -->
+                <li><a href="index.php"><i class="fas fa-home"></i> Início </a></li>
+                <!-- <li><a href="#"><i class="fa fa-bell" id="notificacoesIcone"></i> Notificações </a></li> HOMEPAGE: NAVBAR, LINK => NOTIFICAÇÕES -->
+                <li><a href="sobre.php"><i class="fa-solid fa-circle-info"></i> Sobre </a></li> <!-- HOMEPAGE: NAVBAR, LINK => SOBRE -->
+                <li><a href="dicas.php"><i class="fa-solid fa-lightbulb"></i> Dicas </a></li>
+                <li class="modoEscuroClaroElemento" id="modoEscuroClaroElementoId">
+                    <a><i class="fas fa-moon"></i> Modo </a>
+                </li>
+            </ul>
+            <div class="menuHamburguerElemento" id="menuHamburguerElementoId"> <!-- HOMEPAGE: NAVBAR, MENU HAMBURGUER -->
+                <i class="fas fa-bars"></i> <!-- ÍCONE, MENU HAMBURGUER -->
+            </div>
+        </div>
+    </nav>
+    <div class="perfilContainer">
+        <nav class="perfilNavbarEsquerdo" id="perfilNavbarEsquerdoID"> <!-- PERFIL: NAVBAR LATERAL ESQUERDO -->
+            <div class="perfilNavbarEsquerdoDiv" id="perfilNavbarEsquerdoDivID">
+                <button> PERFIL <i class="fa-solid fa-angle-up" id="perfilNavbarEsquerdoButtonArrowIcon"></i> </button>   
+                <ul class="perfilNavbarEsquerdoPerfilUl" id="perfilNavbarEsquerdoPerfilUlID">
+                    <li data-section="dados"> <i class="fa-regular fa-id-card"></i> Meus Dados </li>
+                    <li data-section="favoritos"> <i class="fas fa-heart"></i> Favoritos </li>
+                    <li data-section="historico"> <i class="fas fa-history"></i> Histórico </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="perfilDados" id="perfilDadosID">
+            <p class="voltarPerfilUlTexto" id="voltarPerfilUlTextoID"></p>
+            <div class="voltarPerfilUl" id="voltarPerfilUlID">
+                <i class="fa-solid fa-angle-left"></i>
+                VOLTAR
+            </div>
+        </div>
+    </div>
+</body>
+<script src="perfil.js"></script>
+<script src="historicoScript.js"></script>
+<script src="favoritosScript.js"></script>
+<script src="perfilDados.js"></script>
+<script src="../script.js"></script>
+<script src="../theme.js"></script>
+</html>

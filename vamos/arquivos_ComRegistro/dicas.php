@@ -1,0 +1,313 @@
+<?php
+// REDIRECIONAMENTO FORTE PARA HTTPS - COLOCAR NO TOPO ABSOLUTO
+if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
+    $redirect_url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect_url);
+    exit();
+}
+?>
+<?php
+  session_start();
+
+  // Verificar se o usuário está logado
+  if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+      // Se não estiver logado, redirecionar para a página de login
+      header('Location: logi.php?message=' . urlencode('Acesso restrito! Faça login.') . '&type=error');
+      exit();
+  }
+
+  require_once 'config.php';
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas de Segurança - SafeLinks</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../dicasStyle.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="index_php.css">
+  <link rel="stylesheet" href="../navBarStyle.css">
+
+  <link rel="icon" href="../SafeLinks_Favicon_Logo.png" type="image/png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navBarElemento" id="navBarElementoId">
+    <div class="navBarContainer">
+      <div class="navBarLogo" id="navBarLogoId"><a href="index.php"> SafeLinks </a></div>
+      <ul class="navBarLinks" id="navBarLinksId">
+        <li><a href="index.php"><i class="fas fa-home"></i> Início </a></li>
+        <li class="user-menu">
+          <button class="user-menu-button"><a href="perfil.php" ><i class="fas fa-user"></i> <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?> </a>
+        </button>
+    
+        </li>        
+        <!-- <li><a href="#"><i class="fa fa-bell" id="notificacoesIcone"></i> Notificações </a></li> -->
+        <li><a href="sobre.php"><i class="fa-solid fa-circle-info"></i> Sobre </a></li>
+        <li> 
+          <a href="logout.php" class="sair-link">
+            <i class="fas fa-sign-out-alt"></i> Deslogar
+          </a>
+        </li>
+        <li class="modoEscuroClaroElemento" id="modoEscuroClaroElementoId">
+            <a><i class="fas fa-moon"></i> Modo </a>
+        </li>
+      </ul>
+      <div class="menuHamburguerElemento" id="menuHamburguerElementoId">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dicas-container">
+    <h1 class="dicas-titulo"><i class="fas fa-lightbulb"></i> Dicas de Segurança Online</h1>
+    
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">--%</div>
+        <div class="stat-label">dos golpes evitados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">proteção contínua</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">dados criptografados</div>
+      </div>
+    </div>
+    
+    <div class="dicas-grid">
+      <!-- Cartas de dicas (mantidas como estão) -->
+      <div class="dica-card delay-1">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-shield-alt dica-icon"></i> Verifique sempre a URL</h3>
+            <p class="dica-descricao">Antes de clicar em qualquer link, verifique se o domínio é legítimo. Preste atenção em erros de digitação ou caracteres estranhos.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-shield-alt dica-icon"></i> Verifique sempre a URL</h3>
+            <div class="dica-detalhes">
+              <p>Exemplo de URL segura: <code>https://www.mercadolivre.com.br</code></p>
+              <p>Exemplo de URL suspeita: <code>http://mercad0livre.com.ru</code></p>
+              <p>Dica extra: Use ferramentas de verificação de URL como o SafeLinks antes de clicar em links desconhecidos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-2">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-lock dica-icon"></i> Use conexões seguras (HTTPS)</h3>
+            <p class="dica-descricao">Sites que começam com "https://" são mais seguros. Evite inserir informações pessoais em sites sem HTTPS.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-lock dica-icon"></i> Use conexões seguras (HTTPS)</h3>
+            <div class="dica-detalhes">
+              <p>O HTTPS criptografa a comunicação entre seu navegador e o site, protegendo seus dados de interceptação.</p>
+              <p>Verifique se há um cadeado na barra de endereços antes de inserir qualquer informação sensível.</p>
+              <p>Instale extensões como "HTTPS Everywhere" para forçar conexões seguras quando disponíveis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-3">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-key dica-icon"></i> Senhas fortes são essenciais</h3>
+            <p class="dica-descricao">Use senhas com pelo menos 12 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-key dica-icon"></i> Senhas fortes são essenciais</h3>
+            <div class="dica-detalhes">
+              <p>Exemplo de senha forte: <code>Segur@nça2024!</code></p>
+              <p>Evite: <code>senha123</code> ou <code>123456</code></p>
+              <p>Use um gerenciador de senhas para criar e armazenar senhas complexas de forma segura.</p>
+              <p>Nunca reuse senhas entre serviços diferentes - um vazamento pode comprometer várias contas.</p>
+  /          </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-4">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-sync-alt dica-icon"></i> Atualize regularmente</h3>
+            <p class="dica-descricao">Mantenha seu navegador, sistema operacional e antivírus sempre atualizados com as últimas correções de segurança.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-sync-alt dica-icon"></i> Atualize regularmente</h3>
+            <div class="dica-detalhes">
+              <p>Atualizações frequentes corrigem vulnerabilidades conhecidas que hackers podem explorar.</p>
+              <p>Ative atualizações automáticas sempre que possível para garantir proteção contínua.</p>
+              <p>Não ignore atualizações de software, especialmente para navegadores e plugins como Flash e Java.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-5">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-ban dica-icon"></i> Desconfie de ofertas milagrosas</h3>
+            <p class="dica-descricao">Se algo parece bom demais para ser verdade, provavelmente é. Ofertas com descontos extremos podem ser golpes.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-ban dica-icon"></i> Desconfie de ofertas milagrosas</h3>
+            <div class="dica-detalhes">
+              <p>Produtos com preços 80% abaixo do mercado geralmente são falsos ou golpes.</p>
+              <p>Pesquise o preço médio do produto em outras lojas confiáveis antes de comprar.</p>
+              <p>Desconfie de promoções recebidas por email ou mensagem sem que você tenha solicitado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-6">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-eye dica-icon"></i> Verifique reviews e avaliações</h3>
+            <p class="dica-descricao">Pesquise sobre a loja ou site antes de comprar. Veja avaliações de outros usuários em plataformas confiáveis.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-eye dica-icon"></i> Verifique reviews e avaliações</h3>
+            <div class="dica-detalhes">
+              <p>Verifique se as avaliações são recentes e autênticas. Muitas avaliações genéricas podem ser falsas.</p>
+              <p>Use o Google Maps e o Reclame Aqui para verificar a reputação de lojas online.</p>
+              <p>Desconfie de sites que só têm avaliações extremamente positivas sem nenhuma crítica.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-7">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-credit-card dica-icon"></i> Use cartão virtual</h3>
+            <p class="dica-descricao">Para compras online, prefira usar cartões virtuais ou serviços como PayPal que oferecem proteção adicional.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-credit-card dica-icon"></i> Use cartão virtual</h3>
+            <div class="dica-detalhes">
+              <p>Cartões virtuais têm limite e validade controlados, reduzindo riscos em caso de vazamento.</p>
+              <p>Muitos bancos oferecem a função de cartão virtual com limites personalizáveis por transação.</p>
+              <p>Serviços como PayPal oferecem proteção ao comprador em caso de disputas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-8">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-wifi dica-icon"></i> Evite redes públicas</h3>
+            <p class="dica-descricao">Não faça compras ou acesse dados sensíveis em redes Wi-Fi públicas sem usar VPN.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-wifi dica-icon"></i> Evite redes públicas</h3>
+            <div class="dica-detalhes">
+              <p>Redes públicas podem ser monitoradas por hackers para capturar suas informações.</p>
+              <p>Se precisar usar Wi-Fi público, utilize uma VPN confiável para criptografar sua conexão.</p>
+              <p>Evite acessar bancos ou fazer compras em redes públicas, mesmo com VPN.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-9">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-envelope dica-icon"></i> Cuidado com phishing</h3>
+            <p class="dica-descricao">Desconfie de emails e mensagens pedindo dados pessoais ou cliques em links suspeitos.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-envelope dica-icon"></i> Cuidado com phishing</h3>
+            <div class="dica-detalhes">
+              <p>Bancos e lojas legítimas nunca pedem senhas ou dados completos por email.</p>
+              <p>Verifique o remetente do email - muitas vezes o domínio é similar, mas não idêntico ao oficial.</p>
+              <p>Não clique em links em emails suspeitos. Em vez disso, acesse o site diretamente digitando o URL.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dica-card delay-10">
+        <div class="dica-item" onclick="flipCard(this)">
+          <div class="dica-frente">
+            <h3 class="dica-titulo"><i class="fas fa-mobile-alt dica-icon"></i> Autenticação em duas etapas</h3>
+            <p class="dica-descricao">Ative a verificação em duas etapas em todos os serviços que oferecerem esta opção.</p>
+            <button class="dica-btn">Clique para virar</button>
+          </div>
+          <div class="dica-verso">
+            <h3 class="dica-titulo" style="color: white;"><i class="fas fa-mobile-alt dica-icon"></i> Autenticação em duas etapas</h3>
+            <div class="dica-detalhes">
+              <p>A 2FA adiciona uma camada extra de segurança mesmo se sua senha for comprometida.</p>
+              <p>Prefira aplicativos autenticadores (Google Authenticator, Authy) em vez de SMS, que pode ser interceptado.</p>
+              <p>Mantenha códigos de backup em local seguro para caso de perda do dispositivo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-container" id="quizContainer">
+      <h3 class="quiz-title">Teste seus conhecimentos sobre segurança online!</h3>
+      <div class="quiz-question" id="quizQuestion">O que você deve fazer ao receber um email pedindo sua senha do banco?</div>
+      <div class="quiz-options" id="quizOptions">
+        <div class="quiz-option" onclick="checkAnswer(this, false)">Responder com a senha</div>
+        <div class="quiz-option" onclick="checkAnswer(this, false)">Clicar no link do email</div>
+        <div class="quiz-option" onclick="checkAnswer(this, true)">Ignorar e deletar o email</div>
+        <div class="quiz-option" onclick="checkAnswer(this, false)">Encaminhar para amigos</div>
+      </div>
+      <div class="quiz-result" id="quizResult"></div>
+      
+      <div class="quiz-progress" id="quizProgress">Pergunta 1 de 5</div>
+      <div class="quiz-navigation">
+        <button class="quiz-btn" id="prevBtn" onclick="prevQuestion()" disabled>Anterior</button>
+        <button class="quiz-btn" id="nextBtn" onclick="nextQuestion()">Próxima</button>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
+      <ul aria-label="Fine Print">
+        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
+        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
+        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+      </ul>
+    </div>
+
+
+
+  </div>
+  <script src="../script.js"></script>
+  <script src="index_php.js"></script>
+  <script src="../theme.js"></script>
+  <script src="../dicas.js"></script>
+</body>
+</html>

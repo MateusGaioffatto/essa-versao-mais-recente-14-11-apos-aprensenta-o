@@ -1,0 +1,199 @@
+<?php
+// REDIRECIONAMENTO FORTE PARA HTTPS - COLOCAR NO TOPO ABSOLUTO
+if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
+    $redirect_url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect_url);
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeLinks - Sobre Nós</title>
+    <link rel="stylesheet" href="arquivos_ComRegistro/sobreStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navBarStyle.css">
+    <link rel="icon" href="SafeLinks_Favicon_Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+<body>
+
+  <div id="logoBackgroundDiv">
+    <img src="SafeLinks_Background_Logo.png" id="logoBackgroundImage">
+  </div>
+
+
+
+  <nav class="navBarElemento" id="navBarElementoId">
+    <div class="navBarContainer">
+      <div class="navBarLogo" id="navBarLogoId"><a href="index.php"> SafeLinks </a></div>
+      <ul class="navBarLinks" id="navBarLinksId">
+        <li><a href="index.php"><i class="fas fa-home"></i> Início </a></li>
+        <li id="usuarioLoginLi"><a href="arquivos_ComRegistro/logi.php"><i class="fas fa-user"></i> Usuário </a></li> 
+        <li><a href="dicas.php"><i class="fas fa-lightbulb"></i> Dicas </a></li> <!-- NOVO BOTÃO DICAS -->
+        <!-- <li><a href="#"><i class="fa fa-bell" id="notificacoesIcone"></i> Notificações </a></li> -->
+        <li class="modoEscuroClaroElemento" id="modoEscuroClaroElementoId">
+            <a><i class="fas fa-moon"></i> Modo </a>
+        </li>
+      </ul>
+      <div class="menuHamburguerElemento" id="menuHamburguerElementoId">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="about-container fade-in-up">
+    <div class="about-header fade-in-up">
+      <h1 class="about-title">Sobre o SafeLinks</h1>
+      <p class="about-subtitle">Conheça mais sobre nossa plataforma e proposta acadêmica</p>
+    </div>
+    
+    <div class="about-content">
+      <div class="mission-vision">
+        <div class="mission fade-in-up delay-1">
+          <h2 class="section-title">
+            <i class="fas fa-bullseye section-icon"></i> Nossa Missão
+          </h2>
+          <p>Proporcionar aos consumidores brasileiros um acesso seguro e confiável a produtos eletrônicos de qualidade, conectando-os apenas com marketplaces e lojas virtuais verificadas, com total transparência e proteção de dados.</p>
+        </div>
+        
+        <div class="vision fade-in-up delay-2">
+          <h2 class="section-title">
+            <i class="fas fa-eye section-icon"></i> Nossa Visão
+          </h2>
+          <p>Ser a plataforma de referência em segurança digital para compras online, reconhecida como o canal mais confiável entre consumidores e lojas virtuais especializadas em eletrônicos.</p>
+        </div>
+      </div>
+      
+      <div class="context fade-in-up delay-3">
+        <h2 class="section-title">
+          <i class="fas fa-graduation-cap section-icon"></i> Contexto Acadêmico
+        </h2>
+        <p>O SafeLinks foi desenvolvido como projeto acadêmico para a disciplina "Projeto Final" do curso técnico de informática da Faeterj-CPTI.</p>
+        <p>Nosso objetivo com este projeto é aplicar na prática os conhecimentos adquiridos em sala de aula, desenvolvendo uma solução tecnológica que atenda a uma necessidade real do mercado, priorizando a segurança e a experiência do usuário em compras online.</p>
+      </div>
+
+      <div class="security fade-in-up delay-4">
+        <h2 class="section-title">
+          <i class="fas fa-shield-alt section-icon"></i> Segurança e Proteção de Dados
+        </h2>
+        <p>No SafeLinks, a segurança dos nossos usuários é nossa prioridade máxima. Implementamos várias camadas de proteção:</p>
+        
+        <div class="security-features">
+          <div class="security-feature">
+            <i class="fas fa-lock security-icon"></i>
+            <h3>Criptografia Avançada</h3>
+            <p>As senhas são criptografadas antes do armazenamento usando algoritmos modernos de hash</p>
+          </div>
+          
+          <div class="security-feature">
+            <i class="fas fa-database security-icon"></i>
+            <h3>Proteção de Dados</h3>
+            <p>Nenhuma senha é armazenada em texto puro no banco de dados</p>
+          </div>
+          
+          <div class="security-feature">
+            <i class="fas fa-server security-icon"></i>
+            <h3>Servidor Seguro</h3>
+            <p>Utilizamos servidores com protocolo SSH para comunicação segura</p>
+          </div>
+          
+          <div class="security-feature">
+            <i class="fas fa-code security-icon"></i>
+            <h3>PHP Seguro</h3>
+            <p>Tratamento rigoroso de dados antes do armazenamento no banco</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="academic-info fade-in-up delay-5">
+        <h2 class="section-title">
+          <i class="fas fa-users section-icon"></i> Equipe de Desenvolvimento
+        </h2>
+        <div class="team-members">
+          <a href="https://github.com/Emanoel-A" target="_blank">
+            <div class="team-member">
+                <i class="fas fa-user-circle team-member-icon"></i>
+                <h3>Emanoel</h3>
+                <p>Back-End & Segurança</p>
+            </div>
+          </a>
+          <a href="https://github.com/MateusGaioffatto" target="_blank">
+            <div class="team-member">
+              <i class="fas fa-user-circle team-member-icon"></i>
+              <h3>Mateus</h3>
+              <p>Front-End & Design</p>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=qrO4YZeyl0I&pp=ygULYmFkIHJvbWFuY2U%3D" target="_blank">
+            <div class="team-member">
+              <i class="fas fa-user-circle team-member-icon"></i>
+              <h3>Henry</h3>
+              <p>Documentação & QA</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="technologies fade-in-up" style="text-align: center;">
+        <h2 class="section-title">
+          <i class="fas fa-code section-icon"></i> Tecnologias Utilizadas
+        </h2>
+        <p><u>Para o desenvolvimento do SafeLinks, utilizamos as seguintes tecnologias:</u></p>
+        <div class="ferramentas">
+        <ul>
+          <li>HTML5 para estruturação do conteúdo</li>
+          <li>CSS3 para estilização e design responsivo</li>
+          <li>JavaScript para interatividade e funcionalidades</li>
+          <li>PHP para o tratamento e conexão de dados</li>
+          <li>MySQL para banco de dados relacional</li>
+          <li>APIs seguras para integração</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+
+    <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
+      <ul aria-label="Fine Print">
+        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
+        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
+        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+      </ul>
+    </div>
+
+
+
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="sobreScript.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
+<script src="theme.js"></script>
+  <script>
+      // Adicionar animação de digitação no título
+      const title = document.querySelector('.about-title');
+      const originalText = title.textContent;
+      title.textContent = '';
+      
+      let i = 0;
+      function typeWriter() {
+        if (i < originalText.length) {
+          title.textContent += originalText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+      
+      setTimeout(typeWriter, 500);
+  </script>
+</body>
+</html>

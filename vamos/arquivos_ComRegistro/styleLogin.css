@@ -1,0 +1,424 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #bbdefb);
+    padding: 20px;
+}
+    body.dark-mode {
+        background: linear-gradient(135deg, #1a237e, #311b92);  
+    }
+
+
+
+
+    
+.loginNavbar {
+    position: fixed;
+    top: -70px; /* hidden by default */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow);
+    animation: navBarElementoShow 1s forwards;
+    z-index: 99;
+}
+    body.dark-mode .loginNavbar {
+        background: rgba(45, 55, 72, 0.95);
+    }
+    @keyframes navBarElementoShow {
+        to {
+            top: 0px;
+        }
+    }
+
+.navBarContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    .navBarLogo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+        .navBarLogo a {
+            color: #4361ee;
+            text-decoration: none;
+        }
+        body.dark-mode .navBarLogo {
+            color: #6c8eff;
+        }
+
+    .navBarLinks {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+        .navBarLinks li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
+        body.dark-mode .navBarLinks li a {
+            color: white;
+        }
+        .navBarLinks li a:hover {
+            color: #4361ee;
+            transform: translateY(-2px);
+        }
+            body.dark-mode .navBarLinks li a:hover {
+                color: #6c8eff;
+            }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            top: 25px;
+        }
+            body.dark-mode .container {
+                background: rgba(45, 55, 72, 0.95);
+            }
+        
+
+
+
+            
+        .header {
+            padding: 30px 0;
+            text-align: center;
+            
+            border-style: solid;
+            border-color: transparent;
+            border-bottom-color: #f0f0f0;
+        }
+            body.dark-mode .header {
+                border-bottom-color: rgb(25, 35, 40);;
+            }
+        .header h2 {
+            color: #4361ee;
+            font-weight: 600;
+            font-size: 24px;
+        }
+            body.dark-mode .header h2 {
+                color: white;
+            }
+        
+        .form-container {
+            padding: 20px 30px;
+        }
+        
+        .form-control {
+            margin-bottom: 15px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        
+        .form-control label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+        }
+            body.dark-mode .form-control label {
+                color: white;
+            }
+        
+        .form-control input {
+            border: 2px solid #f0f0f0;
+            border-radius: 5px;
+            display: block;
+            font-size: 14px;
+            padding: 12px;
+            width: 100%;
+            transition: border 0.3s ease;
+        }
+        
+        .form-control input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .form-control.success input {
+            border-color: #2ecc71;
+        }
+        
+        .form-control.error input {
+            border-color: #e74c3c;
+        }
+        
+        .form-control i {
+            position: absolute;
+            top: 38px;
+            right: 10px;
+            visibility: hidden;
+        }
+        
+        .form-control.success i.fa-check-circle {
+            color: #2ecc71;
+            visibility: visible;
+        }
+        
+        .form-control.error i.fa-exclamation-circle {
+            color: #e74c3c;
+            visibility: visible;
+        }
+        
+        .form-control small {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            font-size: 12px;
+        }
+        
+        .form-control.error small {
+            color: #e74c3c;
+            visibility: visible;
+        }
+        
+        .form-container .loginCadastrarButton, .loginEntrarButton {
+            background: none;
+            
+            border-style: solid;
+            border-radius: 5px;
+            border-color: #f0f0f0;
+
+            color: #4361ee;
+            font-weight: 600;
+            font-size: 17px;
+
+            display: block;
+            padding: 12px;
+
+            margin-top: 20px;
+            width: 100%;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+            body.dark-mode .form-container button {
+                border-color: rgb(25, 35, 40);
+                color: white;
+            }
+        
+        .form-container button:hover {
+            opacity: 0.9;
+        }
+    .menuHamburguerElemento {
+        display: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: var(--dark);
+    }
+        body.dark-mode .menuHamburguerElemento {
+            color: var(--light);
+        }
+
+        /* Responsive navbar */
+        @media (max-width: 768px) {
+        .navBarLinks {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            flex-direction: column;
+            align-items: flex-start;
+            width: 200px;
+            padding: 15px;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: visible;
+            transition: var(--transition);
+        }
+        #modoEscuroClaroElementoId {
+            position: relative;
+            left: 0px;
+        }
+            body.dark-mode .navBarLinks {
+            background: rgba(45, 55, 72, 0.95);
+            }
+            .menuHamburguerElemento {
+            display: block;
+            }
+        }   
+
+.loginGerarPassword {
+    width: auto;
+    height: auto;
+
+    background: none;
+    
+    border: none;
+
+    color: #4361ee;
+    font-weight: 600;
+
+    display: inline;
+
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#mostrarSenhaIcone, #mostrarSenhaRegistroIcone {
+    position: absolute;
+    color: #b9b9b9;
+
+    visibility: visible;
+
+    right: 0;
+    top: 80px;
+    
+    font-size: smaller;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+    #mostrarSenhaIcone u, #mostrarSenhaRegistroIcone u {
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+    }   
+    #mostrarSenhaIcone:hover, #mostrarSenhaRegistroIcone:hover {
+        color: var(--primary);
+        transform: translateY(-2px);
+    }
+    body.dark-mode #mostrarSenhaIcone, #mostrarSenhaRegistroIcone:hover {
+        color: #6c8eff;
+    }
+
+
+
+
+
+#registerFormNascimento::-webkit-calendar-picker-indicator {
+    display: none;
+}
+    #registerFormNascimentoReset {
+        color: #4361ee;
+
+        font-weight: 550;
+        font-size: 12.5px;
+
+        cursor: pointer;
+    }
+        
+
+        
+
+
+        .forgot-password_mostrarSenhaIcone {
+            display: inline;
+            font-size: medium;
+            width: 100%;
+        }
+        
+        .forgot-password a {
+            position: absolute;
+            color: #b9b9b9;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .forgot-password a:hover {
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        #login-form, #register-form, #recover-form {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+        
+        .message {
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+            }
+            
+            .form-container {
+                padding: 15px 20px;
+            }
+        }
+
+        
+
+.registrarUsuarioLinkDiv {
+    text-align: center;
+    padding: 15px;
+}
+    .registrarUsuarioLink {
+        color: #b9b9b9;
+        text-decoration: none;
+
+        cursor: pointer;
+
+        transition: var(--transition);
+    }
+        .registrarUsuarioLink:hover {
+            color: var(--primary);
+        }
+
+
+
+
+
+.recuperarSenha {
+    background: none;
+
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #f0f0f0;
+
+    color: #4361ee;
+
+    font-weight: 600;
+    font-size: 17px;
+
+    display: block;
+
+    padding: 12px;
+    margin: 20px 0;
+    width: 100%;
+
+    cursor: pointer;
+    
+    transition: opacity 0.3s ease;
+}
