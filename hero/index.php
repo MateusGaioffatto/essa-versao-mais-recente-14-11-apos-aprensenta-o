@@ -14,7 +14,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title> SafeLinks - Pesquisa Segura de Produtos </title>
+  <title> SafeLinks[3] - Pesquisa Segura de Produtos </title>
 
   <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="tutorial.css">
@@ -84,7 +84,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
 
     <div class="homePage_Titulo_Pesquisa_Opcoes" id="homePage_Titulo_Pesquisa_OpcoesId"> 
       <header> 
-        <div class="homePageTitulo">SafeLinks</div> 
+        <div class="homePageTitulo" id="homePageTituloId">SafeLinks</div> 
         <div class="homePageSubTitulo">Pesquisa segura em lojas confiáveis</div> 
       </header>
 
@@ -124,10 +124,16 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
 
 
     <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
-      <ul aria-label="Fine Print">
-        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
-        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
-        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+      <ul class="redesDeContatoElementoUl">
+        <div>
+            <i class="fa-solid fa-copyright" id="copyrightIcone"></i> 
+            <u> Todos os direitos reservador a não sei quem </u>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
+          <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
+          <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+        </div>
       </ul>
     </div>
 
@@ -139,7 +145,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
     <script src="tutorial.js"></script>
 
     <script src="theme.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
  
 
     <script src="campoDePesquisa_URL_Produtos.js"></script>

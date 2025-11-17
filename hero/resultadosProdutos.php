@@ -19,7 +19,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
     <link rel="stylesheet" href="navBarStyle.css">
     <!-- <link rel="stylesheet" href="tutorial.css"> -->
     <link rel="stylesheet" href="searchInput_searchButtonsStyle.css">
-    <link rel="stylesheet" href="./arquivos_ComRegistro/resultadosProdutos.css">
+    <link rel="stylesheet" href="resultadosProdutos.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
@@ -30,7 +30,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
 
 
 
-  <div id="logoBackgroundDiv">
+  <div id="logoBackgroundDiv" style="top: 0;">
     <img src="SafeLinks_Background_Logo.png" id="logoBackgroundImage">
   </div>
 
@@ -169,19 +169,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
       <ul class="resultadosProdutosUl" id="resultadosProdutosUlID"></ul>
     </div>
 
-
-
-
-
-    <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
-      <ul aria-label="Fine Print">
-        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
-        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
-        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
-      </ul>
-    </div>
-
-
+    
 
     <script src="script.js"></script>
     <script src="resultadosProdutos.js" type="module"></script>

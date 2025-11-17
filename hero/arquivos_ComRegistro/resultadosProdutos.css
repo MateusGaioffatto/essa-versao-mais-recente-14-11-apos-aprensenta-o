@@ -12,8 +12,6 @@
   align-items: center;
   margin-bottom: 20px;
 
-  height: 47px;
-
   border-radius: var(--border-radius);
   padding: 12px 24px;
   
@@ -168,6 +166,10 @@ body.dark-mode .resultadosProdutosDiv {
   background: rgba(45, 55, 72, 0.9);
 }
 
+
+
+
+
 .resultadosProdutosUl {
   display: flex;
   gap: 10px;
@@ -207,8 +209,13 @@ body.dark-mode .resultadosProdutosDiv {
 
     transition: var(--transition);
   }
+    body.dark-mode .resultadosProdutosA {
+      background: #2d3748;
+    }
     body.dark-mode .resultadosProdutosLi {
       background: #2d3748;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      color: var(--light);
     }
     .resultadosProdutosLi:hover {
       transform: translateY(-5px);
@@ -266,6 +273,14 @@ body.dark-mode .resultadosProdutosDiv {
         top: 15.5%;
         left: 20%;
        }
+        body.dark-mode .resultadosProdutosLiImg {
+          border: 1px solid black;
+          border-radius: 10px;
+        }
+
+
+
+
 
 .favorite-btn {
     background: none;
@@ -289,6 +304,10 @@ body.dark-mode .resultadosProdutosDiv {
     color: #e74c3c;
     transform: scale(1.1);
 }
+
+
+
+
 
 .resultadosProdutosA {
     position: relative;
@@ -374,6 +393,10 @@ body.dark-mode .filtro-select {
   width: 100%;
 }
 
+
+
+
+
 .lojas-sugestoes {
   position: absolute;
   top: 100%;
@@ -413,6 +436,7 @@ body.dark-mode .lojas-sugestoes div:hover {
   display: flex;
   gap: 10px;
   margin-top: 15px;
+  justify-content: center;
 }
 
 .filtro-btn {

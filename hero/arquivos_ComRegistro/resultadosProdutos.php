@@ -26,7 +26,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Resultados: </title>
     <link rel="icon" href="../SafeLinks_Favicon_Logo.png" type="image/png">
-<link rel="stylesheet" href="../searchInput_searchButtonsStyle.css">
+
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../navBarStyle.css">
     <link rel="stylesheet" href="resultadosProdutos.css">
@@ -43,7 +43,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
 </head>
 <body>
 
-  <div id="logoBackgroundDiv">
+  <div id="logoBackgroundDiv" style="top: 0;">
     <img src="../SafeLinks_Background_Logo.png" id="logoBackgroundImage">
   </div>
 
@@ -80,16 +80,13 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
       </div>
     </nav>
 
-  <div class="searchInput_searchButtonsDiv" id="searchInput_searchButtonsDivId">
-    <div class="searchInputDiv" id="searchInputDivId">
-      <input type="text" class="searchInput" id="searchInputId" autocomplete="off" placeholder="Entre com a URL de um site">
-        <button class="searchButton" id="searchButtonId" aria-label="Search">
-          <i class="material-icons" id="searchButtonIcon">search</i>
-        </button>
-        <button class="voiceSearch" id="voiceSearchId" aria-label="VoiceSearch">
-          <i class="material-icons" id="voiceSearchIcon">mic</i>
-        </button>
-    </div>
+    <div class="resultadosProdutosSearchDiv" id="resultadosProdutosSearchDivID"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA E BOTÕES-->
+      <div class="resultadosProdutosBarraDePesquisa" id="resultadosProdutosBarraDePesquisaID"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA CONTEÚDOS -->
+        <input type="text" class="resultadosProdutosSearchInput" id="resultadosProdutosSearchInputID" autocomplete="off"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA -->
+          <button class="resultadosProdutosSearchButton" id="resultadosProdutosSearchButtonID" aria-label="Search"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA, BOTÃO -->
+            <i class="material-icons" id="resultadosProdutosSearchIconID">search</i> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA, BOTÃO, ÍCONE -->
+          </button>
+      </div>
 
       <br>
       
@@ -115,7 +112,6 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
           <input type="text" id="filtroLojasInput" placeholder="Digite o nome da loja" class="filtro-input">
           <div class="lojas-sugestoes" id="lojasSugestoes"></div>
         </div>
-        <div class="lojas-checkboxes" id="lojasCheckboxes"></div>
       </div>
       
       <!-- Filtro de Categorias -->
@@ -162,22 +158,10 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
         </ul>
     </div>
 
-
-
-
-
-    <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
-      <ul aria-label="Fine Print">
-        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
-        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
-        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
-      </ul>
-    </div>
+    
 
     <script src="../script.js"></script>
     <script src="../resultadosProdutosPesquisaFavoritosHistorico.js"></script>
     <script src="resultadosProdutos.js" type="module"></script>
-    <script src="../theme.js"></script>
-    <script src="../campoDePesquisa_URL_Produtos.js"></script>
-</body>
+    <script src="../theme.js"></script></body>
 </html>

@@ -6,27 +6,7 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-// Função para obter ícone da loja
-function getStoreIcon(lojaNome) {
-    const loja = lojaNome ? lojaNome.toLowerCase() : '';
-    
-    if (loja.includes('amazon')) {
-        return 'https://images-na.ssl-images-amazon.com/images/G/32/logo-amazon.png';
-    } else if (loja.includes('mercado') || loja.includes('livre')) {
-        return 'https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__large@2x.png';
-    } else if (loja.includes('magazine') || loja.includes('luiza')) {
-        return 'https://www.magazineluiza.com.br/favicon.ico';
-    } else if (loja.includes('americanas')) {
-        return 'https://www.americanas.com.br/favicon.ico';
-    } else if (loja.includes('submarino')) {
-        return 'https://www.submarino.com.br/favicon.ico';
-    } else if (loja.includes('shoptime')) {
-        return 'https://www.shoptime.com.br/favicon.ico';
-    }
-    
-    // Fallback: ícone genérico de loja
-    return 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkgNUg1QzMuODk1NDMgNSA0Ljg5NTQzIDUgNCA1VjE5QzQgMjAuMTAgNCAxOS4xMCA1IDE5SDE5QzIwLjEwIDE5IDIxIDE5IDIxIDE4VjZDMjEgNC44OTUgMjAuMTAgNSAxOSA1WiIgc3Ryb2tlPSIjNjY2NjY2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zIDVIMjEiIHN0cm9rZT0iIzY2NjY2NiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTIgOUwxMiAxNSIgc3Ryb2tlPSIjNjY2NjY2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik05IDEySDE1IiBzdHJva2U9IiM2NjY2NjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+';
-}
+
 
 
 

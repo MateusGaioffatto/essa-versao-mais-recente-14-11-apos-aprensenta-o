@@ -1,4 +1,4 @@
-
+// MODO ESCURO E CLÁRO: VARIÁVEIS CONSTANTES
 const modoEscuroClaroElemento = document.getElementById("modoEscuroClaroElementoId"); // VARIÁVEL CONSTANTE, BUTTON
 const modoEscuroClaroIcone = document.querySelector("#modoEscuroClaroElementoId i"); // VARIÁVEL CONSTANTE, ÍCONE
 const modoEscuroClaroPseudoAnchor = document.querySelector("#modoEscuroClaroElementoId a"); 

@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'sistema_login');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', '123456');
 define('RESEND_API_KEY', 're_akejCJV6_A1ygQG8rgiNouXiLuT3DcV97');
 define('RESEND_FROM_EMAIL', 'onboarding@resend.dev');
 define('RESEND_FROM_NAME', 'SafeLinks');

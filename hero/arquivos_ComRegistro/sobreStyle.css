@@ -6,6 +6,10 @@
       --dark-color: #2d3748;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     .about-container {
       max-width: 1000px;
       margin: 100px auto 50px;
@@ -253,6 +257,12 @@
     }
     
     @media (max-width: 768px) {
+      .about-container {
+        margin: auto 50px;
+        top: 100px;
+        position: relative;
+      }
+      
       .mission-vision {
         flex-direction: column;
       }

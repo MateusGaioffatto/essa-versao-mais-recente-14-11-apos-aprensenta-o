@@ -214,6 +214,11 @@ body.dark-mode .resultadosProdutosDiv {
     body.dark-mode .resultadosProdutosA {
       background: #2d3748;
     }
+    body.dark-mode .resultadosProdutosLi {
+      background: #2d3748;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      color: var(--light);
+    }
     .resultadosProdutosLi:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0,0,0,0.15);
@@ -270,9 +275,6 @@ body.dark-mode .resultadosProdutosDiv {
         top: 15.5%;
         left: 20%;
        }
-        body.dark-mode .liProdutosTitulos, .liProdutosPrecos, .liProdutosLojasNomes {
-          color: black;
-        }
         body.dark-mode .resultadosProdutosLiImg {
           border: 1px solid black;
           border-radius: 10px;
@@ -391,7 +393,6 @@ body.dark-mode .filtro-select {
   position: relative;
   display: grid;
   width: 100%;
-  justify-content: center;
 }
 
 
@@ -437,6 +438,7 @@ body.dark-mode .lojas-sugestoes div:hover {
   display: flex;
   gap: 10px;
   margin-top: 15px;
+  justify-content: center;
 }
 
 .filtro-btn {

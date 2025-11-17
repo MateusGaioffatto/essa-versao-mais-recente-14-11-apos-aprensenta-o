@@ -177,22 +177,28 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
         </ul>
         </div>
       </div>
-    </div>
-
-    
 
 
+      <br>
 
-    <div class="redesDeContatoElemento" id="redesDeContatoElementoId">
-      <ul aria-label="Fine Print" style="top: 125%">
-        <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
-        <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
-        <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+
+
+    <div class="redesDeContatoElemento" id="redesDeContatoElementoId" style="position: relative; top: 40px; opacity: 1;">
+      <ul class="redesDeContatoElementoUl">
+        <div>
+            <i class="fa-solid fa-copyright" id="copyrightIcone"></i> 
+            <u> Todos os direitos reservador a não sei quem </u>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/@safeLink-s7j" target="blank"><li><i class="fa-brands fa-youtube"></i></li> YouTube </a>
+          <a href="https://web.facebook.com/profile.php?id=61582107901762" target="blank"><li> <i class="fa-brands fa-square-facebook"></i></li> Facebook </a>
+          <a href="https://www.instagram.com/safelin297/" target="blank"> <li><i class="fa-brands fa-instagram"></i></li> Instagram </a>
+        </div>
       </ul>
     </div>
 
-
-    
+    </div>
+        
   </div>
   
 

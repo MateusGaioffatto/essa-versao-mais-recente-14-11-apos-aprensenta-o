@@ -27,7 +27,7 @@ showLogin.addEventListener('click', (e) => {
     hideAllForms();
     loginForm.classList.add('visible');
     formTitle.textContent = 'Login';
-})
+});
 
 showRecover.addEventListener('click', (e) => {
     e.preventDefault();

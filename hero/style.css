@@ -139,11 +139,17 @@ body.dark-mode .homePageSubTitulo {
   bottom: 0;
   width: 100%;
   height: 3rem;
-  color: white;
+  color: #4361ee;
   font-weight: bold;
   opacity: 0;
-  animation: homePage_Titulo_Pesquisa_OpcoesOpacity 2s ease forwards;
+  animation: redesDeContatoElemento_Opacity 2s ease forwards;
 }
+
+  @keyframes redesDeContatoElemento_Opacity {
+    to {
+      opacity: 0.5;
+    }
+  }
   .redesDeContatoElemento a {
     cursor: pointer;
     text-decoration: none;
@@ -154,18 +160,49 @@ body.dark-mode .homePageSubTitulo {
     display: flex;
     list-style: none;
     padding: 0 40px;
-    justify-content: end;
+    justify-content: center;
     top: 10px;
     position: relative;
   }
   .redesDeContatoElemento i {
-    color: white;
+    color: #4361ee;
     font-size: 155%;
     position: relative;
     padding: 0 10px;
-    top: -2px;
+    top: -2px;  
     font-weight: bold;
   }
+    .redesDeContatoElemento div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+      .redesDeContatoElemento div u {
+        color: #4361ee;
+      }
+        body.dark-mode .redesDeContatoElemento div u {
+          opacity: 0.5;
+          color: var(--light);
+        }
+        body.dark-mode .redesDeContatoElementoUl i {
+          opacity: 0.5;
+          color: var(--light);
+        }
+        body.dark-mode .redesDeContatoElementoUl a {
+          opacity: 0.5;
+          color: var(--light);
+        }
+
+      /* #copyrightIcone {
+      position: relative;
+      right: 10px;
+    }
+    .redesDeContatoElemento u {
+      font-style: italic;
+      font-weight: lighter;
+      position: absolute;
+      left: 40px;
+    } */
 
 
 
@@ -180,6 +217,33 @@ body.dark-mode .homePageSubTitulo {
     flex: 0 0 150px;
     height: 110px;
   }
+
+  .redesDeContatoElemento {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: inherit;
+  }
+    .redesDeContatoElemento ul {
+      display: unset;
+      top: -25px;
+      padding: unset;
+    }
+
+    .redesDeContatoElemento div u {
+      width: 330px;
+    }
+  /* .redesDeContatoElemento ul div {
+    justify-content: center;
+  }
+  .redesDeContatoElemento ul {
+    align-items: center;
+    flex-direction: column;
+    top: -55px;
+  }
+    .redesDeContatoElemento ul a li i {
+      color: greenyellow;
+      padding: 0;
+    } */
 }
 
 @keyframes fadeIn {

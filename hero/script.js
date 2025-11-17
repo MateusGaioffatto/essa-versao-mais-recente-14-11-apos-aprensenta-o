@@ -28,6 +28,7 @@ const tutorialBoxesButtonsDiv = document.querySelectorAll(".tutorialBoxesButtons
 
 
 const homePage_Titulo_Pesquisa_Opcoes = document.getElementById("homePage_Titulo_Pesquisa_OpcoesId");
+const homePageTitulo = document.getElementById("homePageTituloId");
 const searchInput_searchButtonsDiv = document.getElementById("searchInput_searchButtonsDivId");
 
 
@@ -55,12 +56,19 @@ let searchInputText = '';
 
 
 
+const redesDeContatoElemento = document.getElementById("redesDeContatoElementoId");
+const redesDeContatoElementoUl = document.querySelector(".redesDeContatoElemento ul");
+const copyrightIcone = document.getElementById("copyrightIcone");
+
+
+
 let favoriteStores = JSON.parse(localStorage.getItem('favoriteStores')) || {}; 
 let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || []; 
 
 
 
 const homePageWindowLargura = window.matchMedia("(max-width: 768px)");
+
 
 
 
@@ -86,12 +94,27 @@ homePageWindowLargura.addEventListener("change", () => {
       navBarLinks.style.opacity = 1;
       navBarClickContagem = 0;
   }
-  else {navBarLinks.style.opacity = 0;}
+  else {
+    navBarLinks.style.opacity = 0;
+  }
 })
   if (window.innerWidth <= 810 || window.innerHeight <= 1080) {
-    navBarElemento.style.left = '0px';  
+    navBarElemento.style.left = '0px';
   }
 
   
+document.addEventListener('DOMContentLoaded', function() {
+  const homePageTituloTexto = homePageTitulo.textContent;
+  homePageTitulo.textContent = '';
 
+  let i = 0;
+  function typeWriter() {
+  if (i < homePageTituloTexto.length) {
+      homePageTitulo.textContent += homePageTituloTexto.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+  }
+  }
 
+  setTimeout(typeWriter, 500);
+});
