@@ -146,14 +146,14 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
           </a>
           <a href="https://github.com/MateusGaioffatto" target="_blank">
             <div class="team-member">
-              <i class="fas fa-user-circle team-member-icon"></i>
+              <img src="..\file.jpg" style="border-radius: 50%; width: 35%;"></img>
               <h3>Mateus</h3>
               <p>Front-End & Design</p>
             </div>
           </a>
           <a href="https://www.youtube.com/watch?v=qrO4YZeyl0I&pp=ygULYmFkIHJvbWFuY2U%3D" target="_blank">
             <div class="team-member">
-              <i class="fas fa-user-circle team-member-icon"></i>
+              <img src="..\voce_pediu.jpg" style="border-radius: 50%; width: 35%;"></img>
               <h3>Henry</h3>
               <p>Documentação & QA</p>
             </div>

@@ -30,7 +30,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../navBarStyle.css">
     <link rel="stylesheet" href="resultadosProdutos.css">
-   <link rel="stylesheet" href="index_php.css">
+    <link rel="stylesheet" href="index_php.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- HOMEPAGE ICONES: GOOGLE FONTS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- HOMEPAGE ICONES: FONT AWESOME -->
@@ -80,7 +80,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
       </div>
     </nav>
 
-    <div class="resultadosProdutosSearchDiv" id="resultadosProdutosSearchDivID"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA E BOTÕES-->
+    <div class="searchInput_searchButtonsDiv" id="searchInput_searchButtonsDivId">
       <div class="resultadosProdutosBarraDePesquisa" id="resultadosProdutosBarraDePesquisaID"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA CONTEÚDOS -->
         <input type="text" class="resultadosProdutosSearchInput" id="resultadosProdutosSearchInputID" autocomplete="off"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA -->
           <button class="resultadosProdutosSearchButton" id="resultadosProdutosSearchButtonID" aria-label="Search"> <!-- RESULTADOS PRODUTOS: BARRA DE PESQUISA, BOTÃO -->
